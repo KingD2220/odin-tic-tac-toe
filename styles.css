@@ -43,23 +43,23 @@ form {
     border-radius: 15px;
     padding: 50px 50px 50px 50px;
     height: 500px;
-    width: 700px;
+    width: 650px;
 }
 
 label {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 500;
 }
 
 input {
     color: black;
     padding: 15px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     width: 100%;
     margin-top: 15px;
     background-color: var(--button);
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .start {
