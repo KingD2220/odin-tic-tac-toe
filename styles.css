@@ -5,7 +5,7 @@
 }
 
 :root {
-    --cell-size: 200px;
+    --cell-size: 180px;
     --background: #3f3f46;
     --cell: #71717a;
     --hover: #52525b;
