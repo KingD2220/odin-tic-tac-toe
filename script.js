@@ -150,11 +150,14 @@ function GameController(playerOneName = 'Player One', playerOneToken = 'X', play
 
 function ScreenController() {
     let game = GameController();
+    const formDialog = document.querySelector('.form-dialog')
     const playerTurnText = document.querySelector('.turn');
     const boardContainer = document.querySelector('.board-container')
     const restartButton = document.querySelector('.restart');
-    const dialog = document.querySelector('dialog');
+    const resultDialog = document.querySelector('.result-dialog');
     const playAgainButton = document.querySelector('.play-again');
+
+    formDialog.showModal();
 
     //Board click listener
     boardContainer.addEventListener('click', (e) => {
@@ -178,6 +181,7 @@ function ScreenController() {
         }
     });
 
+    //Button listeners
     restartButton.addEventListener('click', () => {
         resetGame();
         resetDisplay();
@@ -187,6 +191,16 @@ function ScreenController() {
     playAgainButton.addEventListener('click', () => {
         resetGame();
         resetDisplay();
+    });
+
+    //Start Game
+    formDialog.addEventListener('submit', (e) => {
+        const names = new FormData(e.target);
+        const nameOne = names.get('p1') === '' ? undefined : names.get('p1');
+        const nameTwo = names.get('p2') === '' ? undefined : names.get('p2');
+        game = GameController(nameOne, 'X', nameTwo, 'O');
+        updatePlayerTurn();
+        formDialog.close();
     });
 
     const displayTurn = (cell, player) => {
@@ -203,7 +217,7 @@ function ScreenController() {
         let winScreen = document.querySelector('.result-message')
         winScreen.textContent = message;
         winScreen.appendChild(playAgainButton);
-        dialog.showModal();
+        resultDialog.showModal();
     }
 
     const resetDisplay = () => {
@@ -222,7 +236,7 @@ function ScreenController() {
 
     const resetGame = () => {
         game = GameController(game.getActivePlayer().name, game.getActivePlayer().token, game.getNextPlayer().name, game.getNextPlayer().token);
-        dialog.close();
+        resultDialog.close();
     }
 }
 

@@ -15,6 +15,22 @@
 </head>
 
 <body>
+    <dialog class="form-dialog">
+        <div class="form-wrapper">
+            <form method="dialog">
+                <div>
+                    <label for="p1">Player One Name: </label>
+                    <input type="text" name="p1" id="name">
+                </div>
+                <div>
+                    <label for="p2">Player Two Name: </label>
+                    <input type="text" name="p2" id="name">
+                </div>
+                <button type="submit" class="start">Start Game</button>
+            </form>
+        </div>
+    </dialog>
+
     <h1 class="turn">Player One's Turn - ( X )</h1>
 
     <div class="board-container">
@@ -31,7 +47,7 @@
 
     <button class="restart">Reset</button>
 
-    <dialog>
+    <dialog class="result-dialog">
         <div class="result-screen">
             <h1 class="result-message"></h1>
             <button type="button" class="play-again">Play Again</button>

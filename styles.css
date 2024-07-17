@@ -22,6 +22,53 @@ body {
     background-color: var(--background);
 }
 
+.form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.form-dialog {
+    background-color: rgba(0, 0, 0, 0.705);
+    width: 95vw;
+    height: 92vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--background);
+    border-radius: 15px;
+    padding: 50px 50px 50px 50px;
+    height: 500px;
+    width: 700px;
+}
+
+label {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+input {
+    color: black;
+    padding: 15px;
+    font-size: 1.6rem;
+    width: 100%;
+    margin-top: 15px;
+    background-color: var(--button);
+    border: none;
+    border-radius: 5px;
+}
+
+.start {
+    align-self: center;
+    justify-self: flex-end;
+    width: 250px;
+    scale: 0.9;
+}
+
 h1 {
     font-size: 3rem;
 }
@@ -68,7 +115,7 @@ button {
     margin: 0;
     padding: 0;
     width: 95vw;
-    height: 90vh;
+    height: 92vh;
     background-color: rgba(0, 0, 0, 0.904);
 }
 
