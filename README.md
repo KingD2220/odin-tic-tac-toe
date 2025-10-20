@@ -1,2 +1,2 @@
-A tic-tac-toe project as part of The Odin Project: Javascript Courses.
+A simple tic-tac-toe web app.
 This project uses the concepts of Factory Function and Modules to handle the logic of the game.
